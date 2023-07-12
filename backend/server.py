@@ -3,9 +3,10 @@ from flask_session import Session
 from flask_bcrypt import Bcrypt
 from datetime import timedelta
 from models import connect_mysql, insert_to_db, login_to_app
-
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 # app.secret_key = "petedaisy"
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.config['SESSION_PERMANENT'] = True
